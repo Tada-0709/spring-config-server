@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: guest-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/guest
+    username: postgres
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+  springdoc:
+    api-docs:
+      path: /api-docs
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
